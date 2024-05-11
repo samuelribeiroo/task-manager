@@ -31,10 +31,72 @@ html {
   --gray-200: #d9d9d9;
   --gray-100: #f2f2f2;
 
-  -red-300: #e25858;
+  --red-300: #e25858;
 }
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 93.75%;
+  padding: 4rem;
+  background-color: var(--gray-100);
+}
+
+.pre-component {
+  padding: 2rem;
+  width: 747px;
+  height: 334px;
+  border: 1px dashed var(--purple);
+  margin-bottom: 2.5rem;
+}
+
+.input-component {
+  width: 39.875rem;
+  height: 3.375rem;
+  border-radius: 4.5px;
+  padding: 1rem;
+  outline: none;
+  border: 1px solid var(--gray-700);
+  background-color: var(--gray-700);
+  color: var(--gray-300);
+  font-size: var(--text-base);
+  font-weight: 400;
+}
+
+.input-component:focus {
+  border: 1.5px solid var(--purple-dark);
+}
+
+.add-task {
+  width: 90px;
+  height: 54px;
+  outline: none;
+  line-height: 6px;
+  cursor: pointer;
+  background-color: var(--blue-dark);
+  border-radius: 8px;
+  border: none;
+  padding: 1rem;
+  color: var(--gray-100);
+  font-weight: 700;
+  font-size: var(--text-sm);
+}
+
+.add-task img {
+  margin-bottom: -4.299px;
+  padding-left: 0.45rem;
+}
+
+.add-task:hover {
+  background-color: var(--blue);
+  transition: all ease-in-out 8ms;
+}
+
+.remove-task {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.remove-task:hover {
+  color: var(--red-300);
 }
