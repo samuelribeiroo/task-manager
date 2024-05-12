@@ -37,10 +37,19 @@ html {
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 93.75%;
-  padding: 4rem;
   background-color: var(--gray-100);
 }
 
+.main-header {
+  background-color: var(--gray-700);
+  max-width: 90rem;
+  height: 12.5rem;
+  display: flex;
+  place-content: center;
+  position: relative;
+}
+
+/* To show display components style before get in prod enviroment */
 .pre-component {
   padding: 2rem;
   width: 747px;
@@ -49,26 +58,32 @@ body {
   margin-bottom: 2.5rem;
 }
 
+.input-container {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
 .input-component {
   width: 39.875rem;
   height: 3.375rem;
   border-radius: 4.5px;
   padding: 1rem;
   outline: none;
-  border: 1px solid var(--gray-700);
-  background-color: var(--gray-700);
+  border: 1px solid var(--gray-500);
+  background-color: var(--gray-500);
   color: var(--gray-300);
   font-size: var(--text-base);
   font-weight: 400;
-}
-
-.input-component:focus {
-  border: 1.5px solid var(--purple-dark);
+  position: relative;
+  top: -25px;
 }
 
 .add-task {
-  width: 90px;
-  height: 54px;
+  position: relative;
+  top: -25px;
+  width: 5.625rem;
+  height: 3.375rem;
   outline: none;
   line-height: 6px;
   cursor: pointer;
@@ -86,15 +101,13 @@ body {
   padding-left: 0.45rem;
 }
 
+.input-component:focus {
+  border: 1.5px solid var(--purple-dark);
+}
+
 .add-task:hover {
   background-color: var(--blue);
   transition: all ease-in-out 8ms;
-}
-
-.remove-task {
-  background: none;
-  border: none;
-  cursor: pointer;
 }
 
 .remove-task:hover {
