@@ -37,12 +37,11 @@ html {
 body {
   font-family: "Plus Jakarta Sans", sans-serif !important;
   font-size: 93.75%;
-  padding: 4rem;
-  background-color: var(--gray-100);
+  background-color: var(--gray-700);
 }
 
 .main-header {
-  background-color: var(--gray-700);
+  background-color: var(--gray-600);
   max-width: 90rem;
   height: 12.5rem;
   display: flex;
@@ -52,11 +51,17 @@ body {
 
 /* To show display components style before get in prod enviroment */
 .pre-component {
-  padding: 2rem;
   width: 747px;
   height: 334px;
-  border: 1px dashed var(--purple);
+  /* border: 1px dashed var(--purple); */
   margin-bottom: 2.5rem;
+}
+
+.container-chato {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .input-container {
@@ -68,8 +73,8 @@ body {
 .input-component {
   width: 39.875rem;
   height: 3.375rem;
-  border-radius: 4.5px;
-  padding: 1rem;
+  border-radius: 5.5px;
+  padding: .8756rem;
   outline: none;
   border: 1px solid var(--gray-500);
   background-color: var(--gray-500);
@@ -123,7 +128,7 @@ body {
 }
 
 .task-item {
-  width: 39.5rem;
+  width: 46.8rem;
   height: 4.5rem;
   padding: 1.5rem;
   background-color: var(--gray-400);
