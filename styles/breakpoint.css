@@ -1,0 +1,21 @@
+@import url("style.css");
+
+@media screen and (max-width: 600px) {
+  .input-container {
+    padding: 0rem 0.5rem;
+  }
+
+  .add-task img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .task-component {
+    margin: 0.5rem;
+  }
+
+  .task-item {
+    max-width: 100%;
+  }
+}
