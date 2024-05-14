@@ -11,7 +11,9 @@ newTaskBtn.addEventListener("click", renderNewTask);
 function emptyTask() {
   const isEmpty = inputTask.value === "";
 
-  const displayAlert = isEmpty ? alert("Favor insira sua tarefa no campo abaixo. 😉") : null;
+  const displayAlert = isEmpty
+    ? alert("Favor insira sua tarefa no campo abaixo. 😉")
+    : null;
 
   return displayAlert;
 }
@@ -32,17 +34,36 @@ function renderNewTask() {
     taskDescription.innerHTML = inputTask.value;
     taskComponent.appendChild(taskItem);
 
-    const remove = document.createElement("p");
+    const buttons = document.createElement("div");
+    taskItem.appendChild(buttons);
+
+    const check = document.createElement("span");
+    check.classList.add("check-task");
+    check.innerHTML =
+      '<img src="/assets/Group 1.svg" class ="check-task" alt="" srcset="">';
+    buttons.appendChild(check);
+
+    const remove = document.createElement("span");
     remove.classList.add("remove-task");
-    remove.innerText = "REMOVER";
-    taskItem.appendChild(remove);
+    remove.innerHTML =
+      '<img src="/assets/Group 2.svg" class ="remove-task" alt="" srcset="">';
+    buttons.appendChild(remove);
 
     const removeTask = () => {
       remove.addEventListener("click", () => {
-        remove.parentNode.remove();
+        remove.parentNode.parentNode.remove();
+      });
+    };
+
+    const checkTask = () => {
+      check.addEventListener("click", () => {
+        taskDescription.style.textDecoration = "line-through";
+        taskDescription.style.textDecorationColor = "#78CFB0";
+        taskDescription.style.textDecorationThickness = "18%";
       });
     };
 
     removeTask();
+    checkTask();
   }
 }
